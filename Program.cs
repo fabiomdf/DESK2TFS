@@ -16,15 +16,15 @@ namespace Zoho_TFS
     class Program
     {
         const string ZOHODESK_API_URL = "https://desk.zoho.com/api/v1";
-        const string ZOHODESK_AUTH_TOKEN = "79a8e0e8ad9dc818ca5543a882229ab1";
-        const string ZOHODESK_ORG_ID = "49859917";
+        const string ZOHODESK_AUTH_TOKEN = "";
+        const string ZOHODESK_ORG_ID = "";
 
-        const string TFS_URL = "http://spurs:8080/tfs/Gemmius";
+        const string TFS_URL = "http://spurs:8080/tfs/";
         const string TFS_PROJECT = "VNext";
 
         const string MAIL_HOST = "smtp.gmail.com";
-        const string MAIL_USER = "fabio.medeiros@edax.com.br";
-        const string MAIL_PASS = "f4b103d4xt3cn0l0g14";
+        const string MAIL_USER = "";
+        const string MAIL_PASS = "";
 
         const int MINUTES = 10;
 
@@ -105,13 +105,10 @@ namespace Zoho_TFS
                 MailMessage MailMessage = new MailMessage();
                 
                 MailMessage = new MailMessage();
-                MailMessage.From = new MailAddress("fabio.medeiros@edax.com.br", "Fabio Medeiros", Encoding.UTF8);
+                MailMessage.From = new MailAddress("teste@gmail.com", "Teste", Encoding.UTF8);
                 // Envia e-mail para a TR SISTEMAS
-                MailMessage.To.Add(new MailAddress("fabiomdf@gmail.com", "GEMMIUS - TR", Encoding.UTF8));
+                MailMessage.To.Add(new MailAddress("outroteste@gmail.com", "Outro Teste", Encoding.UTF8));
                 // Envia cópia para membros da EDAX
-                //MailMessage.CC.Add(new MailAddress("nirlene.alves@edax.com.br", "Nirlene Alves", Encoding.UTF8));
-                //MailMessage.CC.Add(new MailAddress("max.demian@edax.com.br", "Max Demian", Encoding.UTF8));
-                //MailMessage.CC.Add(new MailAddress("andre.lins@edax.com.br", "André Lins", Encoding.UTF8));
 
                 MailMessage.Subject = subject;
                 MailMessage.IsBodyHtml = true;
